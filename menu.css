@@ -1,0 +1,295 @@
+/* Общие стили */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0f172a;
+  color: #f1f5f9;
+}
+
+/* HERO секциясы */
+.hero {
+  background: #222;
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 34px;
+  margin-bottom: 5px;
+}
+
+.hero p {
+  top: -50px;
+  font-size: 20px;
+}
+
+/* MENU секциясы */
+.menu {
+  padding: 20px;
+}
+
+.menu h2 {
+  margin-bottom: 15px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+} 
+
+.card {
+  color: white;
+  background:#1e293b;
+  padding: 5px;
+  border-radius: 14px;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card img {
+  color: white;
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 5px;
+}
+
+.card h3 {
+  margin: 5px 0;
+}
+
+.card span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.card button {
+  background: #ff5722;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background:#1e293b;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  color: white;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+}
+
+.modal-content select,
+.modal-content input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+.modal-content button {
+  width: 100%;
+  background: #ff5722;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: white;
+}
+
+/* ORDER секциясы */
+.order-section {
+  align-items: center;
+  background: #222;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.order-section input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.payment {
+  color: white;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.payment label {
+  color: white;
+  background: #333;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.map iframe {
+  width: 100%;
+  height: 180px;
+  border: none;
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+
+.summary {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.send {
+  width: 100%;
+  padding: 14px;
+  background: #25d366;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  color: #aaa;
+  font-size: 13px;
+}
+
+
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.filter-text {
+  font-size: 14px;
+  color: #ccc;
+  white-space: nowrap;
+}
+
+.filter select {
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #222;
+  color: white;
+  border: none;
+  font-size: 14px;
+  outline: none;
+}
+.burger {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  height: 3px;
+  background: white;
+  margin: 6px 0;
+  border-radius: 3px;
+}
+
+.burger-menu {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100%;
+  background: #0f172a;
+  padding: 20px;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.burger-menu.active {
+  right: 0;
+}
+
+.burger-menu h3 {
+  margin-bottom: 15px;
+}
+
+.burger-menu a {
+  display: block;
+  color: #f1f5f9;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+.burger-menu a:hover {
+  background:#1e293b;
+  border-radius: 10px;
+}
+
+.burger-menu hr {
+  margin: 15px 0;
+  border: 1px solid #334155;
+}
+.burger-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #f1f5f9;
+}

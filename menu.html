@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <title>Korean Street Food</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+<header class="hero">
+  <h1> Korean Street Food</h1>
+  <p>Пайдалы • дәмді • жеңіл</p>
+
+  <!-- BURGER -->
+  <div class="burger" onclick="toggleBurger()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+  <!--Жылдам ыздеу-->
+
+   <div class="filter">
+  <span class="filter-text">Жылдам іздеу</span>
+
+  <select id="categorySelect" onchange="filterMenu()">
+    <option value="all">Барлығы</option>
+    <option value="hot">🔥 Ыстық тағамдар</option>
+    <option value="second">🍚 Екінші блюда</option>
+    <option value="salat">🍜 Салаттар</option>
+    <option value="snack">🥟 Снэк</option>
+  </select>
+</div>
+
+<section id="menu" class="menu" data-section="hot">
+  <h2>Ыстық тағамдар</h2>
+  <div class="menu-grid">
+
+    <!-- Рамен -->
+    <div class="card" data-category="hot">
+      <img src="pictures/ramen.jpg" alt="Рамён" onclick="openInfoModal('Рамён','Ащылығы орташа, етпен дайындалған, дәмді және ыстық','pictures/ramen.jpg')">
+      <h3>Рамён</h3>
+      <span>Корей халқының ұлттық тағамы</span>
+      <button onclick="openOrderModal('Рамё',2200)">Қосу</button>
+    </div>
+
+    <!-- Kimbap -->
+    <div class="card" data-category="hot">
+      <img src="pictures/kimpab.jpg" alt="Кимчи тиге" onclick="openInfoModal('Кимчи тиге','Классикалық корей ролл, дәмді және жеңіл','pictures/kimpab.jpg')">
+      <h3>Кимчи тиге</h3>
+      <span>Кимчи қосылған ашты тағам</span>
+      <button onclick="openOrderModal('Кимчи тиге',1500)">Қосу</button>
+    </div>
+
+    <!-- Токпокки -->
+    <div class="card" data-category="hot">
+      <img src="photo.png" alt="Твендян тиге" onclick="openInfoModal('Твендян тиге','Ащы корей тағамы','photo.png')">
+      <h3>Твендян тиге</h3>
+      <span>Ащты тағамдардың бірі</span>
+      <button onclick="openOrderModal('Твендян тиге',1800)">Қосу</button>
+    </div>
+
+    <!-- Фри -->
+    <div class="card" data-category="hot">
+      <img src="photo.png" alt="Том Ям Кунг" onclick="openInfoModal('Том Ям Кунг','Классикалық картоп фри','photo.png')">
+      <h3>Том Ям Кунг</h3>
+      <span>Теңіз өнімдері қосылған сорпа</span>
+      <button onclick="openOrderModal('Том Ям Кунг',800)">Қосу</button>
+    </div>
+
+<!--Юкедян-->
+    <div class="card" data-category="hot">
+      <img src="photo.png" alt="Юкедян" onclick="openInfoModal('Юкедян','Классикалық картоп фри','photo.png')">
+      <h3>Юкедян</h3>
+      <span>Ащты және есте қалар</span>
+      <button onclick="openOrderModal('Юкедян',800)">Қосу</button>
+    </div>
+<!--Кукси-->
+    <div class="card" data-category="hot">
+      <img src="photo.png" alt="Фри" onclick="openInfoModal('Салкын Кукси','Классикалық картоп фри','photo.png')">
+      <h3>Салқын Кукси</h3>
+      <span>Лапша қосылған салқын тағам</span>
+      <button onclick="openOrderModal('Салкын Кукси',800)">Қосу</button>
+    </div>
+<!--Калбитан-->
+    <div class="card" data-category="hot">
+      <img src="photo.png" alt="Фри" onclick="openInfoModal('Кальбитан','Классикалық картоп фри','photo.png')">
+      <h3>Кальбитан</h3>
+      <span>Ет қосылған жай ғана сорпа</span>
+      <button onclick="openOrderModal('Кальбитан',800)">Қосу</button>
+    </div>
+<!--Пипимпаб-->
+    <div class="card" data-category="hot">
+      <img src="photo.png" alt="Фри" onclick="openInfoModal('Мисо суп','Классикалық картоп фри','photo.png')">
+      <h3>Мисо суп</h3>
+      <span>Теңіз жапырағынан махаббатпен,сізге</span>
+      <button onclick="openOrderModal('Мисо суп',800)">Қосу</button>
+    </div>
+
+    <!-- Kimbap -->
+    <div class="card" data-category="hot">
+      <img src="pictures/kimpab.jpg" alt="Хэмультанг" onclick="openInfoModal('Кимчи тиге','Классикалық корей ролл, дәмді және жеңіл','pictures/kimpab.jpg')">
+      <h3>Хэмультанг</h3>
+      <span>Кимчи қосылған ашты тағам</span>
+      <button onclick="openOrderModal('Хэмультанг',1500)">Қосу</button>
+    </div>
+
+    <!-- Kimbap -->
+    <div class="card" data-category="hot">
+      <img src="pictures/kimpab.jpg" alt="Тофу" onclick="openInfoModal('Тофу','Классикалық корей ролл, дәмді және жеңіл','pictures/kimpab.jpg')">
+      <h3>Тофу</h3>
+      <span>Кимчи қосылған ашты тағам</span>
+      <button onclick="openOrderModal('Тофу',1500)">Қосу</button>
+    </div>
+
+  </div>
+</section>
+
+
+<!--Екінші блюдо-->
+<section id="menu" class="menu" data-section="second">
+  <h2>Екінші тағамдар</h2>
+  <div class="menu-grid">
+
+    <div class="card" data-category="second">
+      <img src="pictures/ramen.jpg" alt="Рамен" onclick="openInfoModal('Яннем чикен','Ащылығы орташа, етпен дайындалған, дәмді және ыстық','pictures/ramen.jpg')">
+      <h3>Яннем чикен</h3>
+      <span>Корей халқының ұлттық тағамы</span>
+      <button onclick="openOrderModal('Яннем чикен',2200)">Қосу</button>
+    </div>
+
+    <!-- Kimbap -->
+    <div class="card" data-category="second">
+      <img src="pictures/kimpab.jpg" alt="Kimbap" onclick="openInfoModal('Токпокки','Классикалық корей ролл, дәмді және жеңіл','pictures/kimpab.jpg')">
+      <h3>Токпокки</h3>
+      <span>Кимчи қосылған ашты тағам</span>
+      <button onclick="openOrderModal('Токпокки',1500)">Қосу</button>
+    </div>
+
+    <!-- Токпокки -->
+    <div class="card" data-category="second">
+      <img src="photo.png" alt="Токпокки" onclick="openInfoModal('Чикен чука','Ащы корей тағамы','photo.png')">
+      <h3>Чикен чука</h3>
+      <span>Ащты тағамдардың бірі</span>
+      <button onclick="openOrderModal('Чикен чука',1800)">Қосу</button>
+    </div>
+
+    <!-- Фри -->
+    <div class="card" data-category="second">
+      <img src="photo.png" alt="Фри" onclick="openInfoModal('Камди пегодя','Классикалық картоп фри','photo.png')">
+      <h3>Камди пегодя</h3>
+      <span>Теңіз өнімдері қосылған сорпа</span>
+      <button onclick="openOrderModal('Камди пегодя',800)">Қосу</button>
+    </div>
+
+<!--Юкедян-->
+    <div class="card" data-category="second">
+      <img src="photo.png" alt="Фри" onclick="openInfoModal('Пегодч','Классикалық картоп фри','photo.png')">
+      <h3>Пегодя</h3>
+      <span>Ащты және есте қалар</span>
+      <button onclick="openOrderModal('Пегодя',800)">Қосу</button>
+    </div>
+<!--Кукси-->
+    <div class="card" data-category="second">
+      <img src="photo.png" alt="Фри" onclick="openInfoModal('Кимпаб','Классикалық картоп фри','photo.png')">
+      <h3>Кимпаб</h3>
+      <span>Лапша қосылған салқын тағам</span>
+      <button onclick="openOrderModal('Кимпаб',800)">Қосу</button>
+    </div>
+<!--Калбитан-->
+    <div class="card" data-category="second">
+      <img src="photo.png" alt="Фри" onclick="openInfoModal('Кимпаб чиз','Классикалық картоп фри','photo.png')">
+      <h3>Кимпаб чиз</h3>
+      <span>Ет қосылған жай ғана сорпа</span>
+      <button onclick="openOrderModal('Кимпаб чиз',800)">Қосу</button>
+    </div>
+<!--Пипимпаб-->
+    <div class="card" data-category="second">
+      <img src="photo.png" alt="Фри" onclick="openInfoModal('Мальпулкоги','Классикалық картоп фри','photo.png')">
+      <h3>Мальпулкоги</h3>
+      <span>Жұмыртқа қосылған ерекше дәм</span>
+      <button onclick="openOrderModal('Мальпулкоги',800)">Қосу</button>
+    </div>
+
+  </div>
+</section>
+
+<section id="menu" class="menu" data-section="salat">
+  <h2>Салаттар</h2>
+  <div class="menu-grid">
+
+<!--Салаттар-->
+    <div class="card" data-category="salat">
+      <img src="pictures/ramen.jpg" alt="Рамен" onclick="openInfoModal('Кимчи','Ащылығы орташа, етпен дайындалған, дәмді және ыстық','pictures/ramen.jpg')">
+      <h3>Кимчи</h3>
+      <span>Корей халқының ұлттық тағамы</span>
+      <button onclick="openOrderModal('Кимчи',2200)">Қосу</button>
+    </div>
+
+    <!-- Kimbap -->
+    <div class="card" data-category="salat">
+      <img src="pictures/kimpab.jpg" alt="Kimbap" onclick="openInfoModal('Морковь ча','Классикалық корей ролл, дәмді және жеңіл','pictures/kimpab.jpg')">
+      <h3>Марковь ча</h3>
+      <span>Кимчи қосылған ашты тағам</span>
+      <button onclick="openOrderModal('Марковь ча',1500)">Қосу</button>
+    </div>
+
+    <!-- Токпокки -->
+    <div class="card" data-category="salat">
+      <img src="photo.png" alt="Токпокки" onclick="openInfoModal('Спаржа','Ащы корей тағамы','photo.png')">
+      <h3>Спаржа</h3>
+      <span>Ащты тағамдардың бірі</span>
+      <button onclick="openOrderModal('Спаржа',1800)">Қосу</button>
+    </div>
+
+    <!-- Фри -->
+    <div class="card" data-category="salat">
+      <img src="photo.png" alt="Фри" onclick="openInfoModal('Панчан сет','Классикалық картоп фри','photo.png')">
+      <h3>Панчан сет</h3>
+      <span>Теңіз өнімдері қосылған сорпа</span>
+      <button onclick="openOrderModal('Панчан сет',800)">Қосу</button>
+    </div>
+
+<!--Юкедян-->
+    <div class="card" data-category="salat">
+      <img src="photo.png" alt="Фри" onclick="openInfoModal('Хе из требухи','Классикалық картоп фри','photo.png')">
+      <h3>Хе из требухи</h3>
+      <span>Ащты және есте қалар</span>
+      <button onclick="openOrderModal('Фри',800)">Қосу</button>
+    </div>
+<!--Кукси-->
+    <div class="card" data-category="salat">
+      <img src="photo.png" alt="Фри" onclick="openInfoModal('Чука','Классикалық картоп фри','photo.png')">
+      <h3>Чука</h3>
+      <span>Лапша қосылған салқын тағам</span>
+      <button onclick="openOrderModal('Чука',800)">Қосу</button>
+    </div>
+<!--Калбитан-->
+    <div class="card" data-category="salat">
+      <img src="photo.png" alt="Фри" onclick="openInfoModal('Веча','Классикалық картоп фри','photo.png')">
+      <h3>Веча</h3>
+      <span>Ет қосылған жай ғана сорпа</span>
+      <button onclick="openOrderModal('Веча',800)">Қосу</button>
+    </div>
+<!--Пипимпаб-->
+    <div class="card" data-category="salat">
+      <img src="photo.png" alt="Фри" onclick="openInfoModal('Хе из рыбы','Классикалық картоп фри','photo.png')">
+      <h3>Хе из рыбы</h3>
+      <span>Жұмыртқа қосылған ерекше дәм</span>
+      <button onclick="openOrderModal('Хе из рыбы',800)">Қосу</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- Info Modal (тек фото + қысқаша ақпарат) -->
+<div id="infoModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('infoModal')">&times;</span>
+    <h3 id="infoTitle"></h3>
+    <img id="infoImg" src="photo.png" style="width:100%; border-radius:12px; margin:10px 0;">
+    <p id="infoDesc"></p>
+  </div>
+</div>
+
+<!-- BURGER MENU -->
+<div id="burgerMenu" class="burger-menu">
+
+  <div class="burger-close" onclick="closeBurger()">✕</div>
+
+  <h3>Байланыс</h3>
+
+  <p>📍 п.Отеген батыр,Жансугурова 159</p>
+
+  <a href="https://www.instagram.com/ksf_gres?igsh=MXd4cHZyb2djenlmZA==" target="_blank">📸 Instagram</a>
+  <a href="https://wa.me/77785271719" target="_blank">💬 WhatsApp</a>
+
+  <hr>
+
+  <a href="https://wa.me/77785271719?text=Тех%20қолдау" target="_blank">
+    🛠 Тех қолдау
+  </a>
+<span>⌛️Жұмыс уақыты <br> 10:00-23:00</span>
+</div>
+
+<div id="burgerOverlay" class="burger-overlay" onclick="closeBurger()">
+</div>
+
+<!-- Order Modal (тапсырыс беру) -->
+<div id="orderModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('orderModal')">&times;</span>
+    <h3 id="orderTitle"></h3>
+    
+    <!-- Егер қажет болса, Рамен түрі + ащылық қосуға болады -->
+    <label>Түрі:</label>
+    <select id="orderType">
+      <option>Етпен</option>
+      <option>Сырмен</option>
+      <option>Морепродукты</option>
+      <option>Тауық еті</option>
+    </select>
+
+    <label>Ащылық:</label>
+    <select id="orderSpicy">
+      <option>Ащы емес</option>
+      <option>Орташа</option>
+      <option>Қатты</option>
+    </select>
+
+    <label>Саны:</label>
+    <input type="number" id="orderQty" min="1" value="1">
+
+    <button onclick="addOrderItem()">Қосу</button>
+  </div>
+</div>
+
+<section class="order-section">
+  <h2>🛒 Тапсырыс</h2>
+  <input type="tel" id="phone" placeholder="Телефон номер">
+  <input type="text" id="address" placeholder="Адрес">
+
+  <div class="payment">
+    <label><input type="radio" name="pay" value="Қолма-қол" checked> Қолма-қол</label>
+    <label><input type="radio" name="pay" value="Kaspi QR"> Kaspi QR</label>
+  </div>
+
+  <div class="map">
+    <iframe src="https://www.google.com/maps?q=Almaty&output=embed" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
+  <div class="summary">
+    <p id="orderList">Тағамдар: жоқ</p>
+    <p id="total">Жалпы: 0 ₸</p>
+  </div>
+
+  <button class="send" onclick="sendOrder()">WhatsApp-қа жіберу</button>
+</section>
+
+<footer>
+  <p>© 2026 Барлық құқық қорғалған!</p>
+  <p>ИП: "Торговля"</p>
+  <p>БИИН: 002345678712</p>
+</footer>
+
+<script src="menu.js"></script>
+</body>
+</html>
